@@ -2,6 +2,8 @@
 ### The problem
 `@OnClose` is not called for WebSockets in bad network environments with lots of dropped packets
 
+https://github.com/micronaut-projects/micronaut-core/issues/8493
+
 ### Tools we use
 clumsy - https://jagt.github.io/clumsy/ to make your network condition on Windows significantly worse in a controlled way
 
