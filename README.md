@@ -1,4 +1,4 @@
-## Test project for Micronaut WebSocket server
+## Test project for Micronaut WebSocket @OnClose handler
 
 ### Repro steps
 
