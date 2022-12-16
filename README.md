@@ -1,16 +1,20 @@
-## Micronaut 3.7.4 Documentation
+## Test project for Micronaut WebSocket server
 
-- [User Guide](https://docs.micronaut.io/3.7.4/guide/index.html)
-- [API Reference](https://docs.micronaut.io/3.7.4/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/3.7.4/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
+### Repro steps
 
----
+Start the server.
 
-- [Shadow Gradle Plugin](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow)
+Start the client.
 
-## Feature http-client documentation
+Configure clumsy to drop 50% of the packets and use filter tcp and (tcp.DstPort == 34242 or tcp.SrcPort == 34242).
 
-- [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
+Kill the client (python).
+
+### Actual Behavior
+OnClose handler is NOT called when the python process is killed and the TCP Connection is destroyed.
+
+### Expected behavior
+OnClose handler would be called.
+
 
 
