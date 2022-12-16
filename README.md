@@ -1,4 +1,9 @@
 ## Test project for Micronaut WebSocket @OnClose handler
+### The problem
+`@OnClose` is not called for WebSockets in bad network environments with lots of dropped packets
+
+### Tools we use
+clumsy - https://jagt.github.io/clumsy/ to make your network condition on Windows significantly worse in a controlled way
 
 ### Repro steps
 
